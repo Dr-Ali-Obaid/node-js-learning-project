@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="direction: rtl; padding: 20px">
+      <h1
+        style="
+          margin: auto;
+          background-color: aquamarine;
+          width: fit-content;
+          padding: 5px 20px;
+          border-radius: 10px;
+        "
+      >
+        كل المقالات
+      </h1>
+      <hr />
+      <% for(let article of allArticles){ %>
+      <div
+        style="
+          background-color: rgb(210, 126, 66);
+          padding: 5px 20px;
+          margin: 5px;
+          border-radius: 10px;
+        "
+      >
+        <h1
+          style="
+            background-color: aquamarine;
+            width: fit-content;
+            padding: 5px 20px;
+            border-radius: 10px;
+          "
+        >
+          <%= article.title %>
+        </h1>
+        <h3 style="color: white"><%= article.body %></h3>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
